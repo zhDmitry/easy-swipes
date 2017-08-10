@@ -1,0 +1,21 @@
+{
+	"name": "easy-swipes",
+	"version": "0.1.0",
+	"author": {
+    "name": "Dmitry Zherebko",
+    "email": "kraken@live.ru"
+  },
+	"private": false,
+	"dependencies": {},
+	"devDependencies": {
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.23.0",
+		"babel-preset-env": "^1.6.0",
+		"cross-env": "^5.0.5"
+	},
+	"scripts": {
+		"build": "npm run build:lib && npm run build:es",
+		"build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+		"build:lib": "babel src --out-dir lib"
+	}
+}
